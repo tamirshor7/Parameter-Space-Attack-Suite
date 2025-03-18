@@ -2,9 +2,9 @@
 **Tamir Shor, Ethan Fetaya, Chaim Baskin, Alex Bronstein**  
 </br>
 This repository contains the official implementation of the paper:
+**[Adversarial Robustness in Parameter-Space Classifiers](https://arxiv.org/abs/2502.20314)** </br>
 
-**["Adversarial Attacks for Weight-Space Classifiers"](https://arxiv.org/abs/2502.20314)**  
-Accepted as a **spotlight** at the [ICLR 2025 Workshop on Weight-Space Learning](https://weight-space-learning.github.io/).
+🚀 Accepted as a **spotlight** at the [ICLR 2025 Workshop on Weight-Space Learning](https://weight-space-learning.github.io/).
 
 <img src="images/shared.png" alt="" width="1000">
 
