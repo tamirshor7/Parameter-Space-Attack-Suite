@@ -5,7 +5,7 @@ This repository contains the official implementation of the paper:
 **["Adversarial Attacks for Weight-Space Classifiers"](https://arxiv.org/abs/2502.20314)**  
 Accepted as a **spotlight** at the [ICLR 2025 Workshop on Weight-Space Learning](https://weight-space-learning.github.io/).
 
-![Latent Structure Illustration](images/tsne.png)
+![Latent Structure Illustration](images/tsnes.png)
 
 ## Installation
 
