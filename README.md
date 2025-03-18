@@ -1,9 +1,11 @@
 # Adversarial Attacks for Weight-Space Classifiers
-
+Tamir Shor, Ethan Fetaya, Chaim Baskin, Alex Bronstein
 This repository contains the official implementation of the paper:
 
 **["Adversarial Attacks for Weight-Space Classifiers"](https://arxiv.org/abs/2502.20314)**  
 Accepted as a **spotlight** at the [ICLR 2025 Workshop on Weight-Space Learning](https://weight-space-learning.github.io/).
+
+![Latent Structure Illustration](images/tsne.png)
 
 ## Installation
 
@@ -17,9 +19,9 @@ conda activate pss
 ## Usage & Result Reproduction
 
 In the following sections we provide instructions for full recreation of results from the paper for each of our three considered baselines - MNIST, Fashion-MNIST and ModelNet10. \\
-Our experimental pipeline is compsoed of 3 stages -in section [Functaset Creation](#Functaset Creation) we provide information on creating our datasets of SIREN modulation vectors according [to Dupont et al](https://arxiv.org/abs/2201.12204).
-These datasets are used for the 'clean' training of the weight-space classifiers (without incorporation of adversarial attacks). Insturctions for performing 'clean' classifier training are in section ['Clean' Classifier Training](#'Clean' Classifier Training).
-Finally, we provide usage examples and instructions for paper-results recreation for each attack in our suite in section [Adversarial Attacks](#Adversarial Attacks). 
+Our experimental pipeline is compsoed of 3 stages -in section [Functaset Creation](#functaset-creation) we provide information on creating our datasets of SIREN modulation vectors according [to Dupont et al](https://arxiv.org/abs/2201.12204).
+These datasets are used for the 'clean' training of the weight-space classifiers (without incorporation of adversarial attacks). Insturctions for performing 'clean' classifier training are in section ['Clean' Classifier Training](#clean-classifier-training).
+Finally, we provide usage examples and instructions for paper-results recreation for each attack in our suite in section [Adversarial Attacks](#adversarial-attacks). 
 
 
 ### Functaset Creation
