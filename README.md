@@ -1,11 +1,13 @@
 # Adversarial Attacks for Weight-Space Classifiers
-Tamir Shor, Ethan Fetaya, Chaim Baskin, Alex Bronstein
+**Tamir Shor, Ethan Fetaya, Chaim Baskin, Alex Bronstein**  
+</br>
 This repository contains the official implementation of the paper:
 
 **["Adversarial Attacks for Weight-Space Classifiers"](https://arxiv.org/abs/2502.20314)**  
 Accepted as a **spotlight** at the [ICLR 2025 Workshop on Weight-Space Learning](https://weight-space-learning.github.io/).
 
-![Latent Structure Illustration](images/tsnes.png)
+<img src="images/tsnes.png" alt="" width="600">
+
 
 ## Installation
 
