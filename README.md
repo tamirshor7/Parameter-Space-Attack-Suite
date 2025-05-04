@@ -34,7 +34,7 @@ Finally, we provide usage examples and instructions for paper-results recreation
      ```
    - Fashion-MNIST:
      ```bash
-     cmd1_fmnist
+     python trainer.py --dataset fmnist --data-path <path to Fashion-MNIST dataset>
      ```
    - ModelNet10:
      ```bash
