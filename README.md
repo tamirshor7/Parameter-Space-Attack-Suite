@@ -78,7 +78,7 @@ Finally, we provide usage examples and instructions for paper-results recreation
      ```
    - Fashion-MNIST:
      ```bash
-     python attacks/full_pgd.py --cwidth 2048 --mod-dim 512 --mod-steps 20 --cdepth 1  --dataset fmnist  ---data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --epsilon 16
+     python attacks/full_pgd.py --cwidth 2048 --mod-dim 512 --mod-steps 20 --cdepth 1  --dataset fmnist  --data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --epsilon 16
      ```
 2. **TMO**
    - MNIST:
@@ -88,11 +88,11 @@ Finally, we provide usage examples and instructions for paper-results recreation
      ```
    - Fashion-MNIST:
      ```bash
-     python attacks/tmo.py --cwidth 2048 --mod-dim 512 --cdepth 1  --dataset fmnist  ---data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --mod-steps 20  --tmo-steps 10 --epsilon 16
+     python attacks/tmo.py --cwidth 2048 --mod-dim 512 --cdepth 1  --dataset fmnist  --data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --mod-steps 20  --tmo-steps 10 --epsilon 16
      ```
      - ModelNet10:
      ```bash
-     python attacks/tmo.py --cwidth 512 --mod-dim 2048  --cdepth 1  ---data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier>/best_classifier.pth --tmo-steps 50  --mod-steps 500 --inner-lr 0.005 --epsilon 80
+     python attacks/tmo.py --cwidth 512 --mod-dim 2048  --cdepth 1  --data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier>/best_classifier.pth --tmo-steps 50  --mod-steps 500 --inner-lr 0.005 --epsilon 80
 
 3. **BOTTOM**
   - MNIST:
@@ -102,11 +102,11 @@ Finally, we provide usage examples and instructions for paper-results recreation
      ```
    - Fashion-MNIST:
      ```bash
-     python attacks/bottom.py --cwidth 2048 --mod-dim 512 --cdepth 1  --dataset fmnist  ---data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --mod-steps 20 --interleave-steps 10 --epsilon 16
+     python attacks/bottom.py --cwidth 2048 --mod-dim 512 --cdepth 1  --dataset fmnist  --data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --mod-steps 20 --interleave-steps 10 --epsilon 16
      ```
      - ModelNet10:
      ```bash
-     python attacks/bottom.py --cwidth 512 --mod-dim 2048  --cdepth 1  ---data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier>/best_classifier.pth --interleave-steps 50  --mod-steps 500 --inner-lr 0.005 --epsilon 80
+     python attacks/bottom.py --cwidth 512 --mod-dim 2048  --cdepth 1  --data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier>/best_classifier.pth --interleave-steps 50  --mod-steps 500 --inner-lr 0.005 --epsilon 80
      
 4. **ICOP**
    - MNIST:
@@ -116,11 +116,11 @@ Finally, we provide usage examples and instructions for paper-results recreation
      ```
    - Fashion-MNIST:
      ```bash
-     python attacks/icop.py --cwidth 2048 --mod-dim 512 --cdepth 1  --dataset fmnist  ---data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --mod-steps 20 --epsilon 16
+     python attacks/icop.py --cwidth 2048 --mod-dim 512 --cdepth 1  --dataset fmnist  --data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --mod-steps 20 --epsilon 16
      ```
      - ModelNet10:
      ```bash
-     python attacks/icop.py --cwidth 512 --mod-dim 2048  --cdepth 1  ---data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier>/best_classifier.pth --mod-steps 500 --ext-lr 0.0005 --inner-lr 0.005 --max-proj-iters 5 --epsilon 80
+     python attacks/icop.py --cwidth 512 --mod-dim 2048  --cdepth 1  --data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier>/best_classifier.pth --mod-steps 500 --ext-lr 0.0005 --inner-lr 0.005 --max-proj-iters 5 --epsilon 80
 
 5. **Implicit**
    </br> ***Note*** - While implicit attack can be run with the classifier trained for previous attacks (as instructed in section 'Clean' Classifier Training), in our experiments we have found it more useful to perform L-BFGS based optimization for this attack. To fully recreate results from the paper, optimize a separate Functaset and 'clean' classifier with L-BFGS, and pass the trained classifier as the classifier-checkpoint argument. Instructions for training this classifier are in section ***L-BFGS Baseline***.
@@ -132,11 +132,11 @@ Finally, we provide usage examples and instructions for paper-results recreation
      ```
    - Fashion-MNIST:
      ```bash
-     python attacks/implicit.py --cwidth 2048 --mod-dim 512 --cdepth 1  --dataset fmnist  ---data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier optimized with L-BFGS>/best_classifier.pth --mod-steps 20 --ext-lr 0.01 --epsilon 16
+     python attacks/implicit.py --cwidth 2048 --mod-dim 512 --cdepth 1  --dataset fmnist  --data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier optimized with L-BFGS>/best_classifier.pth --mod-steps 20 --ext-lr 0.01 --epsilon 16
      ```
      - ModelNet10:
      ```bash
-     python attacks/implicit.py --cwidth 512 --mod-dim 2048  --cdepth 1  ---data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier optimized with L-BFGS>/best_classifier.pth --mod-steps 20  --ext-lr 0.5 --epsilon 80
+     python attacks/implicit.py --cwidth 512 --mod-dim 2048  --cdepth 1  --data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier optimized with L-BFGS>/best_classifier.pth --mod-steps 20  --ext-lr 0.5 --epsilon 80
 
 
 #### L-BFGS Baseline
