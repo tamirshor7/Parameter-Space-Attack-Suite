@@ -25,6 +25,7 @@ dependencies:
   - xz=5.4.5=h5eee18b_0
   - zlib=1.2.13=h5eee18b_0
   - pip:
+    - git+https://github.com/fra31/auto-attack
     - annotated-types==0.6.0
     - blis==0.7.11
     - catalogue==2.0.10
