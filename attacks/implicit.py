@@ -259,7 +259,7 @@ def run_attack(model, loader, criterion, constraint, pgd_iters, pgd_lr, voxels =
               
                 with torch.no_grad():
                     dldv = torch.autograd.grad(loss,cur_mod)[0] #grad of classification loss w.r.t modulation vectors
-                    pert.grad = (dppdp@dvdx@dldv).reshape(28,28) #manual gradient computation by the chain rule (under transpose)
+                    pert.grad = (dppdp@(dvdx if dvdx.shape[0]==dppdp.shape[-1] else dvdx.T)@dldv).reshape(28,28) #manual gradient computation by the chain rule (under transpose)
                   
                 optimizer.step()
                 losses.append(loss.item())
