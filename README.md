@@ -137,7 +137,16 @@ Finally, we provide usage examples and instructions for paper-results recreation
      - ModelNet10:
      ```bash
      python attacks/implicit.py --cwidth 512 --mod-dim 2048  --cdepth 1  --data-path <ModelNet10 dataset path> --siren-checkpoint  <path to your ModelNet10 pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained ModelNet10 classifier optimized with L-BFGS>/best_classifier.pth --mod-steps 20  --ext-lr 0.5 --epsilon 80
+6. **Auto-Attack**
+   - MNIST:
+     ```bash
+     python attacks/run_autoattack.py --cwidth 512 --mod-dim 512  --cdepth 3 --dataset mnist  --data-path <MNIST dataset path> --siren-checkpoint  <path to your MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained MNIST classifier>/best_classifier.pth --epsilon 16
 
+     ```
+   - Fashion-MNIST:
+     ```bash
+     python attacks/run_autoattack.py --cwidth 2048 --mod-dim 512 --mod-steps 20 --cdepth 1  --dataset fmnist  --data-path <Fashion-MNIST dataset path> --siren-checkpoint  <path to your Fashion-MNIST pre-trained SIREN>/modSiren.pth --classifier-checkpoint <path to your pretrained Fashion-MNIST classifier>/best_classifier.pth --epsilon 16
+     ```
 
 #### L-BFGS Baseline
 For recreation of the implicit attack results, attack optimization is performed with L-BFGS. We therefore first train a classifier over an L-BFGS optimized functaset. Instructions for running the attack are described in section 5 above. To recreate the functaset and classifier:
