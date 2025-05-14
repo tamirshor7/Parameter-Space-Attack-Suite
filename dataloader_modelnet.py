@@ -108,7 +108,7 @@ class ModelNet(Dataset):
 
 
 def get_modelnet_loader(
-        root='/home/tamir.shor/adv_shapenet/ModelNet10',
+        root='root',
         train=True,
         batch_size=64,
         num_workers=2,
