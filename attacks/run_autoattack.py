@@ -181,8 +181,8 @@ if __name__ == '__main__':
     for x, y in tqdm(dataloader, desc="Loading Data"):
         all_x.append(x)
         all_y.append(y)
-    all_x = torch.cat(all_x[:4]).to(device)
-    all_y = torch.cat(all_y[:4]).to(device)
+    all_x = torch.cat(all_x).to(device)
+    all_y = torch.cat(all_y).to(device)
 
     # Run AutoAttack
     with torch.no_grad():
