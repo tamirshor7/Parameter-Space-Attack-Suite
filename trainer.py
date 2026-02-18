@@ -56,8 +56,7 @@ def fit(
            
                 inner_loss = inner_criterion(fitted.T, images[batch_id].flatten()[None]) if voxels else inner_criterion(fitted, images[batch_id])
                 inner_loss.backward()
-                # Clip the gradient.
-                torch.nn.utils.clip_grad_norm_([modulator], 1)
+             
                 # Update.
                 inner_optimizer.step()
             modulator.requires_grad = False
@@ -137,3 +136,4 @@ if __name__ == '__main__':
                         'state_dict': modSiren.state_dict(),
                         'loss': best_loss,
                         }, f'{savedir}/modSiren.pth')
+
