@@ -24,8 +24,7 @@ from dataloader import get_mnist_loader
 from utils import set_random_seeds
 from SIREN import ModulatedSIREN
 from train_classifier import Classifier
-from full_pgd import FullPGD  # reuse your FullPGD class exactly
-
+from full_pgd import FullPGD  
 # ---------------------------
 # Argument parser (matches full_pgd.py + BPDA extras)
 # ---------------------------
