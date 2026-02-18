@@ -70,8 +70,7 @@ def create_functaset(
                 # Inner optimizer step.
                 inner_optimizer.zero_grad()
                 inner_loss.backward()
-                # Clip the gradient.
-                torch.nn.utils.clip_grad_norm_([modulator], 1)
+                
                 # Update.
                 inner_optimizer.step()
      
@@ -148,3 +147,4 @@ if __name__ == '__main__':
     functa_testset = create_functaset(modSiren, dataloader_test, inner_steps=args.iters, inner_lr=args.lr, voxels=args.dataset=="modelnet",lbfgs=args.lbfgs)
     joblib.dump(functa_testset, f'{args.saveroot}/functaset/{args.dataset}_test.pkl')
     
+
